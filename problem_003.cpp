@@ -2,8 +2,15 @@
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    // TODO: implement solution for problem $i
-    return 0;
+    int n;
+    if (!(cin >> n)) return 0;
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) cin >> a[i];
+    int pos = 0;
+    for (int i = 0; i < n; i++) if (a[i] != 0) a[pos++] = a[i];
+    while (pos < n) a[pos++] = 0;
+    for (int i = 0; i < n; i++) {
+        if (i) cout << " ";
+        cout << a[i];
+    }
 }
