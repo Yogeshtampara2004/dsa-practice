@@ -2,8 +2,9 @@
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    // TODO: implement solution for problem $i
-    return 0;
+    string s;
+    if (!getline(cin, s)) return 0;
+    if (s.size() == 0 && !getline(cin, s)) return 0;
+    reverse(s.begin(), s.end());
+    cout << s;
 }
